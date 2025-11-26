@@ -27,7 +27,7 @@ A simple command-line task management application written in Python. This progra
 Run the program from your terminal:
 
 ```bash
-python task_manager.py
+python todolist.py
 ```
 
 ### Menu Options
