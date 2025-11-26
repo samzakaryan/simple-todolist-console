@@ -72,7 +72,7 @@ Task added successfully
 
 ```
 .
-├── task_manager.py    # Main program file
+├── todolist.py        # Main program file
 └── tasks.txt          # Task storage file (created automatically)
 ```
 
