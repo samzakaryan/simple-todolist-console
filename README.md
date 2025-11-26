@@ -1,94 +1,80 @@
-# To-Do List
+# Task Manager
 
-A simple command-line to-do list application built with Python. Manage your tasks with an easy-to-use menu system and automatic file saving.
+A simple command-line task management application written in Python. This program allows users to manage their daily tasks through an interactive menu system with persistent storage.
 
 ## Features
 
-- ✅ Add new tasks
-- ❌ Remove completed tasks by number
-- 📋 View all tasks with numbered list
-- 💾 Automatic saving - tasks persist between sessions
-- ✔️ Input validation to prevent errors
-- 🔄 Loads previous tasks on startup
+- Add new tasks to your list
+- Remove existing tasks by selection
+- View all current tasks
+- Automatic task persistence to file
+- Input validation and error handling
+- Clean, formatted console interface
 
 ## Requirements
 
 - Python 3.x
+- No external dependencies required
 
-## Setup
+## Installation
 
-1. Clone the repository:
+1. Clone or download this repository
+2. Ensure you have Python 3 installed on your system
+3. No additional setup required
+
+## Usage
+
+Run the program from your terminal:
+
 ```bash
-   git clone https://github.com/yourusername/todolist.git
-   cd todolist
+python task_manager.py
 ```
 
-2. Create a `tasks.txt` file in the same directory (or it will be created automatically):
-```bash
-   touch tasks.txt
-```
+### Menu Options
 
-## How to Use
+The program presents a menu with four options:
 
-Run the program:
-```bash
-python todolist.py
-```
+1. **Add Task** - Enter a new task to add to your list
+2. **Remove Task** - Select and remove a task from your list
+3. **View Tasks** - Display all current tasks
+4. **Exit** - Save all tasks and close the program
 
-### Menu Options:
-- **1** - Add a new task
-- **2** - Remove a task (by number)
-- **3** - View all tasks
-- **4** - Exit and save
+### Data Storage
 
-## Example Usage
-```
-1 - Add task
-2 - Remove task
-3 - View tasks
-4 - Exit
-Choose an option: 1
-Add new task: Buy groceries
-Task added successfully
-
-Choose an option: 3
-
-Your Tasks
-1 Buy groceries
-2 Finish homework
-3 Call dentist
-
-Choose an option: 2
-
-Your Tasks
-1 Buy groceries
-2 Finish homework
-3 Call dentist
-Choose a task to remove: 2
-Task removed successfully
-```
-
-## File Structure
-```
-todolist/
-├── todolist.py      # Main program
-└── tasks.txt        # Saved tasks (auto-generated)
-```
+Tasks are automatically saved to `tasks.txt` when you exit the program. The file will be created in the same directory as the script if it doesn't exist. Previous tasks are loaded when you start the program.
 
 ## How It Works
 
-- Tasks are stored in `tasks.txt`
-- On startup, the program loads existing tasks
-- When you exit (option 4), all tasks are automatically saved
-- Input validation prevents crashes from invalid entries
+- Tasks are stored in memory during program execution
+- On startup, the program reads existing tasks from `tasks.txt`
+- When you exit, all current tasks are written back to the file
+- Each task is stored on a separate line in the text file
 
-## Future Improvements
+## Example Session
 
-- [ ] Mark tasks as complete without removing them
-- [ ] Add task priority levels
-- [ ] Add due dates for tasks
-- [ ] Search/filter tasks
-- [ ] Edit existing tasks
+```
+===================================
+             TASK MANAGER
+===================================
+1 - Add Task
+2 - Remove Task
+3 - View Tasks
+4 - Exit
+===================================
+Choose an option: 1
+
+--- ADD TASK ---
+Enter new task: Complete project documentation
+Task added successfully
+```
+
+## File Structure
+
+```
+.
+├── task_manager.py    # Main program file
+└── tasks.txt          # Task storage file (created automatically)
+```
 
 ## License
 
